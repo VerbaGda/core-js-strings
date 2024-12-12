@@ -200,7 +200,11 @@ function sumOfCodes(str) {
   if (!str) {
     return 0;
   }
-  return str.split('').reduce((sum, char) => sum + char.charCodeAt(0), 0);
+  let sum = 0;
+  for (let i = 0; i < str.length; i += 1) {
+    sum += str.charCodeAt(i);
+  }
+  return sum;
 }
 
 /**
